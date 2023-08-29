@@ -1,0 +1,46 @@
+@use "./mixin" as mx;
+
+.navC {
+  @include mx.navC;
+}
+
+.first {
+  background-image: url("/images/fonddo.jpg");
+
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/images/actividades.jpg");*/
+  background-size: cover;
+  background-position: bottom;
+  height: 100%;
+
+  .contenedor {
+    background-color: #d9b23d6e;
+    border-radius: 25px;
+    @include mx.contenedor;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  a:hover {
+    color: white;
+    .card {
+      color: white;
+      transition: 1s ease;
+      background-color: #04701fbd;
+    }
+  }
+
+  .card {
+    height: 450px;
+    background-color: #0273739f;
+    font-weight: bold;
+    border-radius: 10px;
+    .card-img-top {
+      height: 270px;
+      width: 270px;
+    }
+  }
+}

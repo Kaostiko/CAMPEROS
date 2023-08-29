@@ -1,0 +1,121 @@
+@use "./mixin" as mx;
+
+.navC {
+  @include mx.navC;
+}
+
+/* Section 1 */
+.first {
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/images/pueblos.webp");
+  background-position: bottom;
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+
+  .marco {
+    background-color: #0273739f;
+    border-radius: 20px;
+    height: 100%;
+    width: 80vw;
+
+    .card-img {
+      border-radius: 25px;
+      height: 60%;
+      width: 90%;
+    }
+  }
+
+  .btn {
+    background-color: #73563d;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+  }
+  .btn:hover {
+    background-color: #04d9d9;
+    color: #73563d;
+    transition: 1s;
+  }
+}
+
+/* Section 2 */
+.second {
+  background-image: url("/images/fondo-geometrico.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+
+  h1 {
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  .marcoActividades {
+    height: 100%;
+    width: 100%;
+    font-weight: bold;
+  }
+
+  .card {
+    background-color: #04d9d9bc;
+    box-shadow: 18px 18px 20px transparent;
+    font-weight: bold;
+  }
+
+  .card:hover {
+    box-shadow: 10px 10px 20px #73563d;
+  }
+  img {
+    height: 90%;
+    width: 100%;
+  }
+
+  .btn1 {
+    width: 80px;
+    height: 60px;
+    padding: 0;
+    color: white;
+    font-weight: bold;
+    background-color: #73563d;
+    border-radius: 15px;
+    border: none;
+  }
+  .btn1:hover {
+    transition: 1s ease;
+    color: black;
+    background-color: #04d9d9;
+    border: 2px solid #04d9d9;
+    box-shadow: 10px 10px 15px #73563d;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+@media (max-width: 770px) {
+  .first {
+    height: 100%;
+  }
+  .marco,
+  .marcoActividades {
+    height: 95%;
+    width: 100%;
+    flex-direction: column;
+  }
+  .card-img-top {
+    height: 200px;
+    width: 277px;
+  }
+  .imgC {
+    padding-bottom: 0px;
+  }
+}
+
+@media (max-width: 1025px) {
+  .first {
+    height: 100%;
+  }
+}

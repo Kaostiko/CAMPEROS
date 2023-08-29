@@ -1,0 +1,64 @@
+@use "./mixin" as mx;
+.first {
+  @include mx.first;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/images/fondoAsturias.jpg");
+  height: 100vh;
+  //background-color: #04bfbf82;
+}
+
+.formC {
+  background-color: #04bfbf82;
+  height: 690px;
+  padding: 40px 60px 20px 60px;
+  color: #ffffff;
+
+  h5 {
+    color: #ffffff;
+    text-decoration: double;
+  }
+
+  img {
+    height: 160px;
+    width: 160px;
+  }
+  .texto {
+    height: 150px;
+  }
+  a {
+    text-decoration: none;
+    border: 2px solid transparent;
+    color: #d9b23d;
+    padding: 8px;
+    h3 {
+      font-size: 35px;
+    }
+  }
+  a:hover {
+    background-color: #8c6a03;
+    border: 2px solid #8c6a03;
+    color: white;
+    font-weight: bold;
+    border-radius: 9px;
+  }
+}
+.btn {
+  background-color: transparent;
+  border: 2px solid transparent;
+  color: #d9b23d;
+  font-size: 35px;
+}
+.btn:hover {
+  background-color: #8c6a03;
+  border: 2px solid #8c6a03;
+  font-weight: bold;
+}
+@media (max-width: 770px) {
+  .formC {
+    height: 850px;
+    padding: 30px;
+  }
+  .first {
+    height: 100%;
+  }
+}

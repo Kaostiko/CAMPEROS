@@ -1,0 +1,66 @@
+.firstI {
+  background-image: url("/images/fondoCamper.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  z-index: 1;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.bg {
+  height: 100vh;
+  background-color: rgba(4, 191, 191, 0.5098039216);
+  z-index: 2;
+}
+.bg .btn {
+  background-color: #027373;
+  color: white;
+}
+
+.formC {
+  background-color: rgba(135, 166, 23, 0.8352941176);
+  width: 30%;
+  height: 370px;
+  margin-top: 100px;
+  padding: 40px;
+  border-radius: 9px;
+  z-index: 3;
+}
+
+.formC2 {
+  background-color: rgba(217, 178, 61, 0.7607843137);
+  width: 30%;
+  height: 370px;
+  margin-top: 100px;
+  padding: 40px;
+  border-radius: 9px;
+  z-index: 3;
+}
+
+@media (max-width: 910px) {
+  .firstI {
+    height: 100%;
+  }
+  .bg {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .formC {
+    margin-top: 20px;
+    height: 45%;
+    width: 100%;
+    padding: 25px;
+  }
+  .formC2 {
+    margin-top: 2px;
+    height: 30%;
+    width: 100%;
+    padding: 35px;
+  }
+}/*# sourceMappingURL=index.css.map */

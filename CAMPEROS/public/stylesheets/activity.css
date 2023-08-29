@@ -1,0 +1,76 @@
+.navC {
+  background-color: #0ba47b;
+  height: 50px;
+  top: 0px;
+}
+.navC .enlace {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.navC .navPART {
+  width: 100%;
+}
+.navC .navPART:hover {
+  background-color: #d9b23d;
+  color: white;
+  position: relative;
+  height: 60px;
+}
+.navC .navPART:hover a {
+  font-size: 30px;
+}
+.navC a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  width: 50%;
+  text-align: center;
+}
+.navC .aa {
+  color: #d9b23d;
+}
+.navC .aa:hover {
+  color: white;
+}
+
+.first {
+  background-image: url("/images/fonddo.jpg");
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/images/actividades.jpg");*/
+  background-size: cover;
+  background-position: bottom;
+  height: 100%;
+}
+.first .contenedor {
+  background-color: rgba(217, 178, 61, 0.431372549);
+  border-radius: 25px;
+  width: 90%;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  margin-bottom: 51vh;
+  padding: 30px;
+}
+.first a {
+  text-decoration: none;
+  color: white;
+}
+.first a:hover {
+  color: white;
+}
+.first a:hover .card {
+  color: white;
+  transition: 1s ease;
+  background-color: rgba(4, 112, 31, 0.7411764706);
+}
+.first .card {
+  height: 450px;
+  background-color: rgba(2, 115, 115, 0.6235294118);
+  font-weight: bold;
+  border-radius: 10px;
+}
+.first .card .card-img-top {
+  height: 270px;
+  width: 270px;
+}/*# sourceMappingURL=activity.css.map */

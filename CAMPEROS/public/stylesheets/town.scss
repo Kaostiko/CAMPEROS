@@ -1,0 +1,41 @@
+@use "./mixin" as mx;
+
+.navC {
+  @include mx.navC;
+}
+
+.first {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/images/pueblos.webp");
+  background-position: bottom;
+  background-size: cover;
+  height: 100%;
+
+  .contenedor {
+    background-color: #0273739f;
+    border-radius: 25px;
+    @include mx.contenedor;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    .card {
+      color: black;
+
+      background-color: #fac423dc;
+    }
+  }
+}
+
+.card {
+  height: 400px;
+  background-color: #fac42384;
+  color: white;
+  .card-img-top {
+    height: 200px;
+    width: 277px;
+  }
+}

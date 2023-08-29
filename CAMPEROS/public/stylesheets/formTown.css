@@ -1,0 +1,65 @@
+.first {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/fondoAsturias.jpg");
+  height: 100vh;
+}
+
+.formC {
+  background-color: rgba(4, 191, 191, 0.5098039216);
+  height: 690px;
+  padding: 40px 60px 20px 60px;
+  color: #ffffff;
+}
+.formC h5 {
+  color: #ffffff;
+  -webkit-text-decoration: double;
+          text-decoration: double;
+}
+.formC img {
+  height: 160px;
+  width: 160px;
+}
+.formC .texto {
+  height: 150px;
+}
+.formC a {
+  text-decoration: none;
+  border: 2px solid transparent;
+  color: #d9b23d;
+  padding: 8px;
+}
+.formC a h3 {
+  font-size: 35px;
+}
+.formC a:hover {
+  background-color: #8c6a03;
+  border: 2px solid #8c6a03;
+  color: white;
+  font-weight: bold;
+  border-radius: 9px;
+}
+
+.btn {
+  background-color: transparent;
+  border: 2px solid transparent;
+  color: #d9b23d;
+  font-size: 35px;
+}
+
+.btn:hover {
+  background-color: #8c6a03;
+  border: 2px solid #8c6a03;
+  font-weight: bold;
+}
+
+@media (max-width: 770px) {
+  .formC {
+    height: 850px;
+    padding: 30px;
+  }
+  .first {
+    height: 100%;
+  }
+}/*# sourceMappingURL=formTown.css.map */

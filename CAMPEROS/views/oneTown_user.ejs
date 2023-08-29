@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CAMPEROS</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/stylesheets/oneTown.css" />
+  </head>
+  <body class="container-fluid">
+    <%- include('navbar_user') %>
+    <!-- Section 1 -->
+    <section class="first row">
+      <div class="col-12 p-0 d-flex justify-content-center mt-5 mb-5">
+        <div
+          class="marco container row d-flex justify-content-center align-items-center p-2"
+        >
+          <div class="imgC col-md-6 col-12 gap-4">
+            <h1><%= result[0].town_name %></h1>
+            <br />
+            <img
+              src="/images/town/<%= result[0].img %>"
+              class="card-img mb-3"
+            />
+          </div>
+          <div
+            class="col-md-6 col-12 gap-4 d-flex flex-column justify-content-center align-items-center"
+          >
+            <div class="col-12">
+              <p class="card-text"><%= result[0].telephone %></p>
+              <p class="card-text"><%= result[0].email %></p>
+              <div
+                class="col-12 d-flex flex-md-column justify-content-center gap-5"
+              >
+                <p class="card-text"><%= result[0].description %></p>
+              </div>
+              <div class="col-12 d-flex justify-content-center gap-5">
+                <h4 class="card-text"><%= result[0].city_name %></h4>
+                <h4 class="card-text"><%= result[0].region_name %></h4>
+              </div>
+            </div>
+            <!-- <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12780.77592728526!2d-3.9073592961832295!3d36.78989919019989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7224b09423f143%3A0x907177a88feb8605!2s29788%20Frigiliana%2C%20M%C3%A1laga!5e0!3m2!1ses!2ses!4v1693169544747!5m2!1ses!2ses"
+              width="400"
+              height="180"
+              style="border: 0; border-radius: 10px"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section 2 -->
+    <section class="second row">
+      <h1 class="text-center">ACTIVIDADES</h1>
+      <div class="marcoActividades d-flex p-3 gap-4">
+        <% result2.forEach(activity => { %>
+        <a href="/activity/activity_user">
+          <div class="card p-3" style="width: 20rem">
+            <img
+              src="/images/activity/<%= activity.activity_img %>"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title"><%= activity.activity_name %></h5>
+              <div class="d-flex justify-content-around">
+                <p class="card-text"><%= activity.activity_type %></p>
+                <p class="card-text" value="<%= activity.activity_likes %>">
+                  <%=activity.activity_likes %><a
+                    href="/activity/like_user/<%= activity.activity_id %>"
+                    >👍</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </a>
+        <% }) %>
+      </div>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

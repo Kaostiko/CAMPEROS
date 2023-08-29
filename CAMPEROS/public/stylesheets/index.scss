@@ -1,0 +1,59 @@
+@use "./mixin" as mx;
+
+.firstI {
+  background-image: url("/images/fondoCamper.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  z-index: 1;
+}
+///town/formTown
+a {
+  text-decoration: none;
+  color: black;
+}
+.bg {
+  height: 100vh;
+  background-color: #04bfbf82;
+  z-index: 2;
+
+  .btn {
+    @include mx.btn;
+  }
+}
+.formC {
+  background-color: #87a617d5;
+  width: 30%;
+  @include mx.formCIndex;
+}
+
+.formC2 {
+  background-color: #d9b23dc2;
+  width: 30%;
+  @include mx.formCIndex;
+}
+
+//Query movil
+@media (max-width: 910px) {
+  .firstI {
+    height: 100%;
+  }
+  .bg {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .formC {
+    margin-top: 20px;
+    height: 45%;
+    width: 100%;
+    padding: 25px;
+  }
+  .formC2 {
+    margin-top: 2px;
+    height: 30%;
+    width: 100%;
+    padding: 35px;
+  }
+}

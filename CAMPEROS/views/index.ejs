@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CAMPEROS</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+  </head>
+  <body class="container-fluid">
+    <div class="firstI row">
+      <div class="bg p-0 col-12 d-flex justify-content-center gap-5">
+        <div class="col-12 col-sm-6 formC">
+          <form action="/" method="post">
+            <div class="mb-3">
+              <h3>
+                <em><b>Login de Ayuntamiento</b></em>
+              </h3>
+              <label for="examplename" class="form-label">email</label>
+              <input
+                type="text"
+                class="form-control"
+                id="examplename"
+                aria-describedby="name"
+                name="email"
+              />
+              <label for="exampleSTYLE" class="form-label">password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="exampleSTYLE"
+                aria-describedby="name"
+                name="password"
+              />
+              <%= typeof message != 'undefined' ? message : null %>
+              <br />
+              <button type="submit" class="btn mb-2">
+                <em>LOGIN</em>
+              </button>
+              <br />
+              <a href="town/formTown">
+                <h5 class="text-end"><i>Quiero darme de alta</i></h5>
+              </a>
+            </div>
+          </form>
+        </div>
+        <div class="col-12 col-sm-6 formC2 text-center">
+          <h2>
+            <i>Quiero entrar a descubrir nuevas experiencia y sitios únicos</i>
+          </h2>
+          <a href="/activity/activity_user"
+            ><button class="btn mt-3">DESCUBRIR ACTIVIDADES</button></a
+          >
+          <a href="/town/town_user"
+            ><button class="btn mt-3">DESCUBRIR PUEBLOS</button></a
+          >
+          <!-- <form action="/" method="post">
+            <div class="mb-3">
+              <h3>
+                <em><b>Login de Ayuntamiento</b></em>
+              </h3>
+              <label for="examplename" class="form-label">email</label>
+              <input
+                type="text"
+                class="form-control"
+                id="examplename"
+                aria-describedby="name"
+                name="email"
+              />
+              <label for="exampleSTYLE" class="form-label">password</label>
+              <input
+                type="text"
+                class="form-control"
+                id="exampleSTYLE"
+                aria-describedby="name"
+                name="password"
+              />
+              <%= typeof message != 'undefined' ? message : null %>
+              <br />
+              <button type="submit" class="btn btn-primary">
+                <em>LOGIN</em>
+              </button>
+            </div>
+          </form> -->
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
