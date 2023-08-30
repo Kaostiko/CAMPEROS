@@ -1,59 +1,99 @@
 @use "./mixin" as mx;
-
+* {
+  font-style: italic;
+}
 .firstI {
-  background-image: url("/images/fondoCamper.jpeg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  @include mx.first;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/images/fondoAsturias.jpg");
+
   height: 100vh;
-  z-index: 1;
 }
-///town/formTown
-a {
-  text-decoration: none;
-  color: black;
-}
-.bg {
-  height: 100vh;
-  background-color: #04bfbf82;
-  z-index: 2;
+
+.first_1 {
+  // background-color: red;
+  width: 50%;
+  height: 370px;
+  padding: 50px;
+  margin-top: 100px;
+
+  .cabecera {
+    color: white;
+    text-align: center;
+  }
+
+  .form-control {
+    width: 100%;
+    color: white;
+    background-color: rgba(55, 55, 55, 0.5);
+    border: 1px solid rgba(55, 55, 55, 0.5);
+    margin-top: 30px;
+  }
+
+  .form-control::placeholder {
+    color: white;
+    font-style: italic;
+  }
+
+  a {
+    text-decoration: none;
+    color: #04d9d9;
+    h3 {
+      margin-top: 35px;
+    }
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: #ebeb14;
+  }
 
   .btn {
-    @include mx.btn;
+    background-color: #04d9d9;
+    color: white;
+    margin-left: 42%;
+  }
+  .btn:hover {
+    background-color: #ebeb14;
+    color: rgb(0, 0, 0);
+  }
+
+  .btn2 {
+    background-color: #04d9d9;
+    color: white;
+    border-radius: 10px;
+    height: 50px;
+    width: 130px;
+  }
+  .btn2:hover {
+    background-color: #ebeb14;
+    color: rgb(0, 0, 0);
   }
 }
-.formC {
-  background-color: #87a617d5;
-  width: 30%;
-  @include mx.formCIndex;
-}
 
-.formC2 {
-  background-color: #d9b23dc2;
+.first_2 {
+  h2 {
+    color: white;
+  }
+  hr {
+    //height: 20px;
+    border-top: 1px solid #ebeb14;
+    //background-color: #e97b7b;
+    //opacity: 1;
+  }
+  /* background-color: #d9b23dc2;
   width: 30%;
-  @include mx.formCIndex;
+  @include mx.formCIndex; */
 }
 
 //Query movil
 @media (max-width: 910px) {
-  .firstI {
-    height: 100%;
-  }
-  .bg {
-    flex-direction: column;
-    align-items: center;
+  .first_1 {
+    margin-top: 50px;
+
     width: 100%;
-  }
-  .formC {
-    margin-top: 20px;
-    height: 45%;
-    width: 100%;
-    padding: 25px;
-  }
-  .formC2 {
-    margin-top: 2px;
-    height: 30%;
-    width: 100%;
-    padding: 35px;
+    .btn {
+      margin-left: 35%;
+    }
   }
 }

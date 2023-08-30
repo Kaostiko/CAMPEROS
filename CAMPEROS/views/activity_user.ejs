@@ -12,9 +12,14 @@
     />
     <link rel="stylesheet" href="/stylesheets/activity.css" />
   </head>
-  <body class="container-fluid text">
+  <body class="container-fluid">
     <%- include('navbar_user') %>
     <section class="first row d-flex justify-content-center">
+      <h1 class="presentation col-12 mb-1">
+        Busca <span style="color: #ebeb14">actividades</span> y
+        <br />
+        disfruta
+      </h1>
       <div
         class="contenedor col-12 wrap d-flex justify-content-center align-items-center gap-5"
       >
@@ -26,7 +31,7 @@
               class="card-img-top"
             />
             <div class="card-body">
-              <h5 class="card-title"><%= activity.activity_name %></h5>
+              <p class="card-title"><%= activity.activity_name %></p>
               <div class="d-flex justify-content-around">
                 <p class="card-text"><%= activity.activity_type %></p>
                 <p class="card-text" value="<%= activity.activity_likes %>">
@@ -36,7 +41,7 @@
                   >
                 </p>
               </div>
-              <h3 style="margin-top: 10px"><b><%=activity.town_name %></b></h3>
+              <h4><b><%=activity.town_name %></b></h4>
             </div>
           </div>
         </a>

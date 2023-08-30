@@ -1,20 +1,83 @@
-<header class="headC sticky-top">
-  <nav class="navC row text-center">
-    <ul class="enlace navbar-nav gap-1">
-      <li class="navPART">
-        <a class="nav-link ps-2" href="/town/oneTown/<%= result[0].town_id %>"
-          >CAMPEROS</a
-        >
-      </li>
-      <li class="navPART aa">
-        <a class="nav-link aa" href="/town">PUEBLOS</a>
-      </li>
-      <li class="navPART">
-        <a class="nav-link" href="/activity">ACTIVIDADES</a>
-      </li>
-      <li class="navPART aa">
-        <a class="nav-link aa" href="/">SALIR</a>
-      </li>
-    </ul>
+<header class="headC sticky-top row">
+  <nav class="navbar row navbar-expand-lg bg-body-secondary m-0 p-0">
+    <div class="container-fluid col-12 d-flex justify-content-around">
+      <a class="navbar-brand" href="/home" style="font-weight: bold"
+        >CAMPEROS</a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="/town/oneTown/<%= result[0].town_id %>"
+              style="font-weight: bold"
+            >
+              Tú Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" style="font-weight: bold" href="/town"
+              >Pueblos</a
+            >
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="/activity"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              style="font-weight: bold"
+            >
+              Actividades
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a
+                  class="dropdown-item"
+                  style="font-weight: bold"
+                  href="/activity/filtro1"
+                  >Más recientes</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  style="font-weight: bold"
+                  href="/activity/filtro2"
+                  >Más queridas</a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  style="font-weight: bold"
+                  href="/activity"
+                  >Todas las actividades</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" style="font-weight: bold" href="/"
+              >Salir</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
   </nav>
 </header>

@@ -1,17 +1,35 @@
 @use "./mixin" as mx;
+
 .first {
   @include mx.first;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("/images/fondoAsturias.jpg");
   height: 100vh;
-  //background-color: #04bfbf82;
+}
+
+.form-control,
+.form-select {
+  width: 100%;
+  color: white;
+  background-color: rgba(55, 55, 55, 0.5);
+  border: 1px solid rgba(55, 55, 55, 0.5);
+  margin-top: 30px;
+}
+
+.form-control::placeholder {
+  color: white;
+  font-style: italic;
 }
 
 .formC {
-  background-color: #04bfbf82;
   height: 690px;
   padding: 40px 60px 20px 60px;
   color: #ffffff;
+
+  h1 {
+    font-weight: bold;
+    color: #ebeb14;
+  }
 
   h5 {
     color: #ffffff;
@@ -27,30 +45,30 @@
   }
   a {
     text-decoration: none;
-    border: 2px solid transparent;
-    color: #d9b23d;
+    color: #04d9d9;
     padding: 8px;
     h3 {
       font-size: 35px;
+      font-weight: bold;
     }
   }
   a:hover {
-    background-color: #8c6a03;
-    border: 2px solid #8c6a03;
-    color: white;
+    background-color: #ebeb14;
+    color: black;
     font-weight: bold;
     border-radius: 9px;
   }
 }
 .btn {
-  background-color: transparent;
-  border: 2px solid transparent;
-  color: #d9b23d;
+  color: #04d9d9;
   font-size: 35px;
+  font-weight: bold;
+  background-color: #ebeb1400;
+  border: 0px;
 }
 .btn:hover {
-  background-color: #8c6a03;
-  border: 2px solid #8c6a03;
+  background-color: #ebeb14;
+  color: black;
   font-weight: bold;
 }
 @media (max-width: 770px) {

@@ -8,6 +8,9 @@ router.get("/", indexController.showLogin);
 router.post("/", indexController.login);
 
 //localhost:3000/home
-router.get("/home/:town_id");
+router.get("/home", indexController.viewHome);
+
+//localhost:3000/home
+router.get("/home_user", indexController.viewHome_user);
 
 module.exports = router;

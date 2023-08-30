@@ -6,11 +6,33 @@
   height: 100vh;
 }
 
+.form-control,
+.form-select {
+  width: 100%;
+  color: white;
+  background-color: rgba(55, 55, 55, 0.5);
+  border: 1px solid rgba(55, 55, 55, 0.5);
+  margin-top: 30px;
+}
+
+.form-control::-moz-placeholder {
+  color: white;
+  font-style: italic;
+}
+
+.form-control::placeholder {
+  color: white;
+  font-style: italic;
+}
+
 .formC {
-  background-color: rgba(4, 191, 191, 0.5098039216);
   height: 690px;
   padding: 40px 60px 20px 60px;
   color: #ffffff;
+}
+.formC h1 {
+  font-weight: bold;
+  color: #ebeb14;
 }
 .formC h5 {
   color: #ffffff;
@@ -26,31 +48,31 @@
 }
 .formC a {
   text-decoration: none;
-  border: 2px solid transparent;
-  color: #d9b23d;
+  color: #04d9d9;
   padding: 8px;
 }
 .formC a h3 {
   font-size: 35px;
+  font-weight: bold;
 }
 .formC a:hover {
-  background-color: #8c6a03;
-  border: 2px solid #8c6a03;
-  color: white;
+  background-color: #ebeb14;
+  color: black;
   font-weight: bold;
   border-radius: 9px;
 }
 
 .btn {
-  background-color: transparent;
-  border: 2px solid transparent;
-  color: #d9b23d;
+  color: #04d9d9;
   font-size: 35px;
+  font-weight: bold;
+  background-color: rgba(235, 235, 20, 0);
+  border: 0px;
 }
 
 .btn:hover {
-  background-color: #8c6a03;
-  border: 2px solid #8c6a03;
+  background-color: #ebeb14;
+  color: black;
   font-weight: bold;
 }
 

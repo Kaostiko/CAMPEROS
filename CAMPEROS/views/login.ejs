@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CAMPEROS</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+  </head>
+  <body class="">
+    <div class="firstI container-fluid">
+      <div class="row d-flex flex-column align-items-center gap-5">
+        <div class="first_1">
+          <form action="/" method="post">
+            <div class="mb-3">
+              <h3 class="cabecera" style="color: white">
+                <em><b>Accede a tu perfil</b></em>
+              </h3>
+              <input
+                type="text"
+                class="form-control"
+                id="examplename"
+                aria-describedby="name"
+                name="email"
+                placeholder="email"
+              />
+              <input
+                type="password"
+                class="form-control"
+                id="exampleSTYLE"
+                aria-describedby="name"
+                name="password"
+                placeholder="password"
+              />
+              <%= typeof message != 'undefined' ? message : null %>
+              <br />
+              <button type="submit" class="btn mb-2">
+                <em>ENTRAR</em>
+              </button>
+              <br />
+              <a href="town/formTown">
+                <h3 class="text-center"><i>Cear tu perfil</i></h3>
+              </a>
+            </div>
+          </form>
+          <br />
+          <div class="first_2 text-center">
+            <hr />
+            <h2>
+              <i>Entra gratis ahora y descubre los planes más interesantes</i>
+            </h2>
+            <a href="/home_user"
+              ><button class="btn2 mt-3">DESCUBRIR</button></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

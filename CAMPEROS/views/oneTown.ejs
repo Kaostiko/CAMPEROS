@@ -15,65 +15,57 @@
   <body class="container-fluid">
     <%- include('navbar') %>
     <!-- Section 1 -->
-    <section class="first row">
-      <div class="col-12 p-0 d-flex justify-content-center mt-5 mb-5">
+    <section class="first row justify-content-center">
+      <div class="marco row d-flex justify-content-center align-items-center">
+        <h1 class="col-12 mb-5">
+          Área privada de:
+          <span class="pueblo"><%= result[0].town_name %></span>
+        </h1>
+
+        <div class="col-md-6 col-12 gap-4">
+          <img src="/images/town/<%= result[0].img %>" class="card-img mb-3" />
+        </div>
         <div
-          class="marco container row d-flex justify-content-center align-items-center p-4"
+          class="col-md-6 col-12 gap-4 d-flex flex-column justify-content-center align-items-center"
         >
-          <div class="col-md-6 col-12 gap-4">
-            <h1>
-              Áre privada de: <br />
-              <%= result[0].town_name %>
-            </h1>
-            <img
-              src="/images/town/<%= result[0].img %>"
-              class="card-img mb-3"
-            />
-          </div>
-          <div
-            class="col-md-6 col-12 gap-4 d-flex flex-column justify-content-center align-items-center"
-          >
-            <!-- botones -->
+          <div class="row">
+            <p class="col-6"><%= result[0].telephone %></p>
+            <p class="col-6"><%= result[0].email %></p>
             <div
-              class="botones d-flex justify-content-around col-md-6 col-12 gap-4"
+              class="col-12 d-flex flex-md-column justify-content-center gap-5"
             >
-              <a href="/town/showEditTown/<%= result[0].town_id %>" class=""
-                ><button type="button" class="btn btn-info">
-                  Modificar Perfil
-                </button></a
-              >
-              <a href="/activity/formActivity/<%= result[0].town_id %>" class=""
-                ><button type="button" class="btn btn-info">
-                  Nueva Actividad
-                </button></a
-              >
+              <p class="card-text"><%= result[0].description %></p>
             </div>
-
-            <div class="col-12">
-              <p class="card-text"><%= result[0].telephone %></p>
-              <p class="card-text"><%= result[0].email %></p>
-
-              <div
-                class="col-12 d-flex flex-md-column justify-content-center gap-5"
-              >
-                <p class="card-text"><%= result[0].description %></p>
-              </div>
-              <div class="col-12 d-flex justify-content-center gap-5 mt-3">
-                <h4 class="card-text"><%= result[0].city_name %></h4>
-                <h4 class="card-text"><%= result[0].region_name %></h4>
-              </div>
+            <div class="col-12 d-flex justify-content-center gap-5 mt-3">
+              <h4 class="card-text"><%= result[0].city_name %></h4>
+              <h4 class="card-text"><%= result[0].region_name %></h4>
             </div>
+          </div>
+          <!-- botones -->
+          <div class="d-flex justify-content-around col-md-6 col-12 gap-1">
+            <a href="/town/showEditTown/<%= result[0].town_id %>" class=""
+              ><button type="button" class="btn btn-info">
+                Modificar Perfil
+              </button></a
+            >
+            <a href="/activity/formActivity/<%= result[0].town_id %>" class=""
+              ><button type="button" class="btn btn-info">
+                Nueva Actividad
+              </button></a
+            >
           </div>
         </div>
       </div>
     </section>
     <!-- Section 2 -->
     <section class="second row">
-      <h1 class="text-center">ACTIVIDADES</h1>
-      <div class="marcoActividades d-flex col-12 col-mg-6 p-5 gap-4">
+      <h1 class="text-center">Actividades propuestas</h1>
+      <div
+        class="marcoActividades d-flex align-items-center col-12 col-mg-6 p-5 gap-4"
+      >
         <% result2.forEach(activity => { %>
         <a href="/activity">
-          <div class="card p-3" style="width: 20rem">
+          <div class="card p-3 m-3" style="width: 20rem">
             <img
               src="/images/activity/<%= activity.activity_img %>"
               class="card-img-top"

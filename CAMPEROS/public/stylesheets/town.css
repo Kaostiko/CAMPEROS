@@ -1,69 +1,49 @@
-.navC {
-  background-color: #0ba47b;
-  height: 50px;
-  top: 0px;
-}
-.navC .enlace {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-.navC .navPART {
-  width: 100%;
-}
-.navC .navPART:hover {
-  background-color: #d9b23d;
-  color: white;
-  position: relative;
-  height: 60px;
-}
-.navC .navPART:hover a {
-  font-size: 30px;
-}
-.navC a {
-  text-decoration: none;
-  color: black;
-  font-size: 20px;
-  font-weight: bold;
-  width: 50%;
+.presentation {
+  height: 20vh;
   text-align: center;
-}
-.navC .aa {
-  color: #d9b23d;
-}
-.navC .aa:hover {
-  color: white;
+  padding-top: 50px;
+  color: whitesmoke;
+  background-color: rgba(55, 55, 55, 0.5);
+  border: 0px solid rgba(55, 55, 55, 0.5);
+  box-shadow: 3px 3px 50px rgba(55, 55, 55, 0.872);
+  font-style: italic;
+  font-size: 50px;
 }
 
 .first {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/pueblos.webp");
-  background-position: bottom;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/calle.jpg");
+  background-position: center;
   background-size: cover;
   height: 100%;
 }
 .first .contenedor {
-  background-color: rgba(2, 115, 115, 0.6235294118);
   border-radius: 25px;
-  width: 90%;
+  width: 95%;
   flex-wrap: wrap;
-  margin-top: 50px;
-  margin-bottom: 51vh;
-  padding: 30px;
+  margin-bottom: 15vh;
+  padding: 10px;
+  border-bottom: 1px solid rgba(55, 55, 55, 0.5);
 }
 .first a {
   text-decoration: none;
 }
-.first a:hover .card {
-  color: black;
-  background-color: rgba(250, 196, 35, 0.862745098);
+.first .card {
+  background-color: whitesmoke;
+  box-shadow: 18px 18px 20px transparent;
+  height: 400px;
+  padding: 5px;
+  text-align: center;
+}
+.first .card .card-img-top {
+  height: 200px;
+  width: 280px;
+}
+.first .card:hover {
+  transform: rotate(-10deg);
 }
 
-.card {
-  height: 400px;
-  background-color: rgba(250, 196, 35, 0.5176470588);
-  color: white;
-}
-.card .card-img-top {
-  height: 200px;
-  width: 277px;
+@media (max-width: 910px) {
+  .contenedor {
+    margin-top: 32vh;
+  }
 }/*# sourceMappingURL=town.css.map */

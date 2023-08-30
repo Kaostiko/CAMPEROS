@@ -1,17 +1,85 @@
-<header class="headC sticky-top text-center">
-  <nav class="navC row text-center">
-    <ul class="enlace navbar-nav justify-content-center align-items-center">
-      <li class="navPART">
-        <a class="nav-link ps-2" href="/town/town_user">PUEBLOS</a>
-      </li>
-      <li class="navPART aa justify-content-center">
-        <a class="nav-link aa text-center ps-2" href="/activity/activity_user"
-          >ACTIVIDADES</a
-        >
-      </li>
-      <li class="navPART">
-        <a class="nav-link ps-2" href="/">SALIR</a>
-      </li>
-    </ul>
+<header class="headC sticky-top row">
+  <nav class="navbar row navbar-expand-lg bg-body-secondary m-0 p-0">
+    <div class="container-fluid col-12 d-flex justify-content-around">
+      <a class="navbar-brand" href="/home_user" style="font-weight: bold"
+        >CAMPEROS</a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              style="font-weight: bold"
+              href="/town/town_user"
+              >Pueblos</a
+            >
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="/activity/activity_user"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              style="font-weight: bold"
+            >
+              Actividades
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a
+                  class="dropdown-item"
+                  style="font-weight: bold"
+                  href="/activity/filtro1User"
+                  >Más reciente</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  style="font-weight: bold"
+                  href="/activity/filtro2User"
+                  >Más likes</a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  style="font-weight: bold"
+                  href="/activity/activity_user"
+                  >Todas las actividades</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" style="font-weight: bold" href="/"
+              >Salir</a
+            >
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Buscar"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
   </nav>
 </header>

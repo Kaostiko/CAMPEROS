@@ -3,7 +3,7 @@ const connection = require("../config/db");
 class ActivityController {
   //pagina con todas las actividades
   viewactivity = (req, res) => {
-    let sql = `SELECT * FROM activity join town on town.town_id = activity.town_id join city on town.city_id = city.city_id   join region on city.region_id = region.region_id WHERE is_deleted = 0 ORDER BY activity_id DESC`;
+    let sql = `SELECT * FROM activity join town on town.town_id = activity.town_id join city on town.city_id = city.city_id   join region on city.region_id = region.region_id WHERE is_deleted = 0 ORDER BY region_name DESC`;
 
     connection.query(sql, (err, result) => {
       if (err) throw err;
@@ -118,6 +118,46 @@ class ActivityController {
       res.render("onlyActivity", { result });
     });
   }; */
+
+  filtro_reciente = (req, res) => {
+    let sql =
+      "SELECT * FROM activity join town on town.town_id = activity.town_id join city on town.city_id = city.city_id   join region on city.region_id = region.region_id WHERE is_deleted = 0 ORDER BY activity_id DESC";
+
+    connection.query(sql, (err, result) => {
+      if (err) throw err;
+      res.render("activity", { result });
+    });
+  };
+
+  filtro_likes = (req, res) => {
+    let sql =
+      "SELECT * FROM activity join town on town.town_id = activity.town_id join city on town.city_id = city.city_id   join region on city.region_id = region.region_id WHERE is_deleted = 0 ORDER BY activity_likes DESC";
+
+    connection.query(sql, (err, result) => {
+      if (err) throw err;
+      res.render("activity", { result });
+    });
+  };
+
+  filtro_reciente_user = (req, res) => {
+    let sql =
+      "SELECT * FROM activity join town on town.town_id = activity.town_id join city on town.city_id = city.city_id   join region on city.region_id = region.region_id WHERE is_deleted = 0 ORDER BY activity_id DESC";
+
+    connection.query(sql, (err, result) => {
+      if (err) throw err;
+      res.render("activity_user", { result });
+    });
+  };
+
+  filtro_likes_user = (req, res) => {
+    let sql =
+      "SELECT * FROM activity join town on town.town_id = activity.town_id join city on town.city_id = city.city_id   join region on city.region_id = region.region_id WHERE is_deleted = 0 ORDER BY activity_likes DESC";
+
+    connection.query(sql, (err, result) => {
+      if (err) throw err;
+      res.render("activity_user", { result });
+    });
+  };
 }
 
 module.exports = new ActivityController();

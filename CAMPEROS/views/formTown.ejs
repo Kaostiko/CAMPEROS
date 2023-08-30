@@ -15,9 +15,7 @@
   <body class="container-fluid">
     <section class="first row d-flex justify-content-center">
       <div class="formC container-sm col-12 mt-2">
-        <h1 class="text-center" style="font-weight: bold; color: #d9b23d">
-          Formulario de alta
-        </h1>
+        <h1 class="text-center">Formulario de alta</h1>
         <%= typeof message != 'undefined'? message : null %>
         <form
           action="/town/createFormTown"
@@ -25,7 +23,6 @@
           enctype="multipart/form-data"
         >
           <div class="mb-2 col-12">
-            <label class="form-label">Nombre del pueblo</label>
             <input
               type="text"
               name="town_name"
@@ -33,11 +30,11 @@
               class="form-control"
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
+              placeholder="Nombre del pueblo"
             />
           </div>
           <div class="row">
             <div class="mb-2 col-12 col-md-6">
-              <label class="form-label">E-mail</label>
               <input
                 type="text"
                 name="email"
@@ -45,30 +42,30 @@
                 class="form-control"
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
+                placeholder="eMail"
               />
             </div>
             <div class="mb-2 col-12 col-md-6">
-              <label class="form-label">Password</label>
               <input
                 type="text"
                 class="form-control"
                 name="password"
                 autocomplete="none"
+                placeholder="Password"
               />
             </div>
           </div>
           <div class="row">
             <div class="col-12 col-md-6 mb-3">
-              <label class="form-label">Telefono</label>
               <input
                 type="text"
                 class="form-control"
                 name="telephone"
                 autocomplete="none"
+                placeholder="Telefono"
               />
             </div>
             <div class="col-12 col-md-6 mb-3">
-              <label class="form-label">Foto</label>
               <input type="file" class="form-control" name="img" />
             </div>
           </div>
@@ -99,14 +96,12 @@
           </select>
           <br />
           <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label"
-              >Resumen del pueblo</label
-            >
             <textarea
               class="form-control"
               name="description"
               id="exampleFormControlTextarea1"
               rows="3"
+              placeholder="Comentario sobre el pueblo"
             ></textarea>
           </div>
           <div class="d-flex justify-content-around">

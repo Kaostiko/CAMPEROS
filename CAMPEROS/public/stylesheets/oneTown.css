@@ -1,81 +1,51 @@
-.navC {
-  background-color: #0ba47b;
-  height: 50px;
-  top: 0px;
-}
-.navC .enlace {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-.navC .navPART {
-  width: 100%;
-}
-.navC .navPART:hover {
-  background-color: #d9b23d;
-  color: white;
-  position: relative;
-  height: 60px;
-}
-.navC .navPART:hover a {
-  font-size: 30px;
-}
-.navC a {
-  text-decoration: none;
-  color: black;
-  font-size: 20px;
-  font-weight: bold;
-  width: 50%;
-  text-align: center;
-}
-.navC .aa {
-  color: #d9b23d;
-}
-.navC .aa:hover {
-  color: white;
+* {
+  font-style: italic;
 }
 
 /* Section 1 */
 .first {
-  color: white;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/pueblos.webp");
-  background-position: bottom;
+  background-position: center;
   background-size: cover;
-  height: 100vh;
+  background-repeat: no-repeat;
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/covadonga.jpg");
+  height: 100%;
   text-align: center;
 }
 .first .marco {
-  background-color: rgba(2, 115, 115, 0.6235294118);
-  border-radius: 20px;
+  width: 80%;
   height: 100%;
-  width: 80vw;
+  margin: 100px;
 }
 .first .marco .card-img {
   border-radius: 25px;
-  height: 60%;
+  height: 70%;
   width: 90%;
 }
+.first .pueblo {
+  color: #ebeb14;
+}
 .first .btn {
-  background-color: #73563d;
-  border-radius: 25px;
-  color: white;
+  color: #04d9d9;
+  font-size: 35px;
   font-weight: bold;
+  background-color: rgba(235, 235, 20, 0);
+  border: 0px;
 }
 .first .btn:hover {
-  background-color: #04d9d9;
-  color: #73563d;
+  background-color: #ebeb14;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
   transition: 1s;
 }
 
 /* Section 2 */
 .second {
-  background-image: url("/images/fondo-geometrico.jpg");
-  background-position: center;
-  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/gristexture.jpg");
   height: 100%;
 }
 .second h1 {
-  color: white;
+  color: #ebeb14;
   font-weight: bold;
   margin-top: 20px;
 }
@@ -85,33 +55,33 @@
   font-weight: bold;
 }
 .second .card {
-  background-color: rgba(4, 217, 217, 0.737254902);
+  background-color: whitesmoke;
+  height: 450px;
   box-shadow: 18px 18px 20px transparent;
   font-weight: bold;
+  margin-right: 25px;
 }
 .second .card:hover {
-  box-shadow: 10px 10px 20px #73563d;
+  box-shadow: 5px 5px 10px rgb(128, 128, 128);
+  transform: scale(1.1);
 }
 .second img {
   height: 90%;
   width: 100%;
 }
 .second .btn1 {
-  width: 80px;
-  height: 60px;
-  padding: 0;
-  color: white;
+  color: #04d9d9;
+  font-size: 20px;
   font-weight: bold;
-  background-color: #73563d;
   border-radius: 15px;
-  border: none;
+  background-color: rgba(235, 235, 20, 0);
+  border: 0px;
 }
 .second .btn1:hover {
-  transition: 1s ease;
-  color: black;
-  background-color: #04d9d9;
-  border: 2px solid #04d9d9;
-  box-shadow: 10px 10px 15px #73563d;
+  background-color: #ebeb14;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  transition: 1s;
 }
 .second a {
   text-decoration: none;
@@ -119,14 +89,15 @@
 }
 
 @media (max-width: 770px) {
-  .first {
-    height: 100%;
-  }
-  .marco,
-  .marcoActividades {
-    height: 95%;
-    width: 100%;
+  .marco {
     flex-direction: column;
+  }
+  .marcoActividades {
+    transition: 1s;
+    height: 95%;
+    width: 90%;
+    flex-direction: column;
+    margin-right: 10px;
   }
   .card-img-top {
     height: 200px;

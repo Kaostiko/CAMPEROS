@@ -15,6 +15,12 @@
   <body class="container-fluid">
     <%- include('navbar_user') %>
     <section class="first row d-flex justify-content-center">
+      <h1 class="presentation col-12 mb-1">
+        Descubre todos los <sapn style="color: #ebeb14">pueblos</sapn> de
+        España,
+        <br />
+        hasta el último rincón
+      </h1>
       <div
         class="contenedor d-flex justify-content-center align-items-center gap-5"
       >
@@ -40,6 +46,12 @@
               <p class="">
                 <b><i><%= town.description%></i></b>
               </p>
+              <div class="d-flex justify-content-around">
+                <p class="card-text"><%= town.activity_type %></p>
+                <p class="card-text" value="<%= town.activity_likes %>">
+                  <%=town.activity_likes %>👍
+                </p>
+              </div>
             </div>
           </div>
         </a>

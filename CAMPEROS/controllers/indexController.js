@@ -2,9 +2,9 @@ const connection = require("../config/db");
 const bcrypt = require("bcrypt");
 
 class IndexController {
-  //vista home - sin logear
+  //vista  login
   showLogin = (req, res) => {
-    res.render("index");
+    res.render("login");
   };
 
   // abrir perfil privado
@@ -25,25 +25,32 @@ class IndexController {
             res.redirect(`/town/oneTown/${result[0].town_id}`);
           } else {
             console.log("Contraseña incorrecta");
-            res.render("index", { message: "Contraseña incorrecta" });
+            res.render("login", { message: "Contraseña incorrecta" });
           }
         });
       } else {
-        res.render("index", { message: "El usuario no está dado de alta" });
+        res.render("login", { message: "El usuario no está dado de alta" });
       }
     });
   };
 
-  /* viewHome = (req, res) => {
-    let {town_id} =req.body;
+  viewHome = (req, res) => {
     let sql = "SELECT * FROM town ";
 
     connection.query(sql, (err, result) => {
-      // console.log("****************************", result);
       if (err) throw err;
-      res.render("index", { result });
+      res.render("home", { result });
     });
-  }; */
+  };
+
+  viewHome_user = (req, res) => {
+    let sql = "SELECT * FROM town ";
+
+    connection.query(sql, (err, result) => {
+      if (err) throw err;
+      res.render("home_user", { result });
+    });
+  };
 }
 
 module.exports = new IndexController();

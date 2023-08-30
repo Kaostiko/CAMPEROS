@@ -1,46 +1,62 @@
 @use "./mixin" as mx;
 
-.navC {
-  @include mx.navC;
+.presentation {
+  height: 20vh;
+  text-align: center;
+  padding-top: 50px;
+  color: whitesmoke;
+  background-color: rgba(55, 55, 55, 0.5);
+  border: 0px solid rgba(55, 55, 55, 0.5);
+  box-shadow: 3px 3px 50px rgba(55, 55, 55, 0.872);
+  font-style: italic;
+  font-size: 50px;
 }
 
 .first {
-  background-image: url("/images/fonddo.jpg");
-
-  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/images/actividades.jpg");*/
-  background-size: cover;
-  background-position: bottom;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/images/hombrecar.jpg");
+  background-size: contain;
+  background-position: center;
   height: 100%;
 
   .contenedor {
-    background-color: #d9b23d6e;
     border-radius: 25px;
-    @include mx.contenedor;
+    width: 95%;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    margin-bottom: 15vh;
+    padding: 10px;
+    border-bottom: 1px solid rgba(55, 55, 55, 0.5);
   }
 
   a {
     text-decoration: none;
-    color: white;
-  }
-
-  a:hover {
-    color: white;
-    .card {
-      color: white;
-      transition: 1s ease;
-      background-color: #04701fbd;
-    }
   }
 
   .card {
-    height: 450px;
-    background-color: #0273739f;
-    font-weight: bold;
-    border-radius: 10px;
+    background-color: whitesmoke;
+    height: 400px;
+    padding: 5px;
+    text-align: center;
     .card-img-top {
       height: 270px;
       width: 270px;
     }
+  }
+
+  .card:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    box-shadow: 5px 5px 40px rgb(0, 0, 0);
+    transition: all 0.5s ease-in-out;
+  }
+}
+@media (max-width: 910px) {
+  .card {
+    margin-top: 5vh;
+  }
+  .presentation {
+    font-size: 40px;
   }
 }

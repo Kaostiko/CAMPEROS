@@ -1,41 +1,60 @@
 @use "./mixin" as mx;
 
-.navC {
-  @include mx.navC;
+.presentation {
+  height: 20vh;
+  //background-color: red;
+  text-align: center;
+  padding-top: 50px;
+  color: whitesmoke;
+  background-color: rgba(55, 55, 55, 0.5);
+  border: 0px solid rgba(55, 55, 55, 0.5);
+  box-shadow: 3px 3px 50px rgba(55, 55, 55, 0.872);
+  font-style: italic;
+  font-size: 50px;
 }
 
 .first {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/images/pueblos.webp");
-  background-position: bottom;
+    url("/images/calle.jpg");
+  background-position: center;
   background-size: cover;
   height: 100%;
 
   .contenedor {
-    background-color: #0273739f;
     border-radius: 25px;
-    @include mx.contenedor;
+    width: 95%;
+    flex-wrap: wrap;
+    margin-bottom: 15vh;
+    padding: 10px;
+    border-bottom: 1px solid rgba(55, 55, 55, 0.5);
   }
 
   a {
     text-decoration: none;
   }
+  .card {
+    background-color: whitesmoke;
+    box-shadow: 18px 18px 20px transparent;
+    height: 400px;
+    padding: 5px;
+    text-align: center;
 
-  a:hover {
-    .card {
-      color: black;
-
-      background-color: #fac423dc;
+    .card-img-top {
+      height: 200px;
+      width: 280px;
     }
+  }
+
+  .card:hover {
+    -moz-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
   }
 }
 
-.card {
-  height: 400px;
-  background-color: #fac42384;
-  color: white;
-  .card-img-top {
-    height: 200px;
-    width: 277px;
+@media (max-width: 910px) {
+  .contenedor {
+    margin-top: 32vh;
   }
 }
