@@ -34,13 +34,19 @@
   }
 
   .card {
-    background-color: whitesmoke;
+    background-position: center;
+    background-size: cover;
     height: 400px;
     padding: 5px;
     text-align: center;
-    .card-img-top {
+    color: white;
+    font-weight: bold;
+    /* .card-img-top {
       height: 270px;
       width: 270px;
+    } */
+    .card-body {
+      background-color: rgba(0, 0, 0, 0.432);
     }
   }
 
@@ -52,9 +58,15 @@
     transition: all 0.5s ease-in-out;
   }
 }
+
+footer {
+  @include mx.footerC;
+}
+
 @media (max-width: 910px) {
   .card {
     margin-top: 5vh;
+    height: 420px;
   }
   .presentation {
     font-size: 40px;

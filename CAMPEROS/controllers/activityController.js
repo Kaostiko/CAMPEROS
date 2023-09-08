@@ -32,7 +32,6 @@ class ActivityController {
     let { activity_name, activity_type } = req.body;
     let img = req.file.filename;
 
-    //console.log("Llego hasta aquiiiiiiiiiiiiiiii");
     let sql = `INSERT INTO activity (activity_name, activity_type, activity_img, town_id) VALUES ("${activity_name}", "${activity_type}", "${img}", ${town_id})`;
 
     connection.query(sql, (err, result) => {

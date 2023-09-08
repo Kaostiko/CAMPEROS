@@ -76,6 +76,21 @@
   font-weight: bold;
 }
 
+footer {
+  position: sticky;
+  background-color: #ebeb14;
+  padding-top: 15px;
+}
+footer .iconos {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+footer .iconos img {
+  height: 50px;
+  width: 50px;
+}
+
 @media (max-width: 770px) {
   .formC {
     height: 850px;

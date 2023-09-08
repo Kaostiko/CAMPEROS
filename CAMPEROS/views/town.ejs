@@ -14,49 +14,60 @@
   </head>
   <body class="container-fluid">
     <%- include('navbar') %>
-
-    <section class="first row d-flex justify-content-center">
-      <h1 class="presentation col-12 mb-1">
-        Descubre todos los <sapn style="color: #ebeb14">pueblos</sapn> de
-        España,
-        <br />
-        hasta el último rincón
-      </h1>
-      <div
-        class="contenedor d-flex justify-content-center align-items-center col-12 gap-5"
-      >
-        <% result.forEach(town => { %>
-        <a href="/town/oneTown/<%= town.town_id %>">
-          <div class="card p-1" style="width: 18rem">
-            <img
-              src="/images/town/<%= town.img %>"
-              class="card-img-top"
-              alt="imgen representativa del pueblo"
-            />
-            <div class="card-body">
-              <h4 class="card-title text-center"><%= town.town_name %></h4>
-              <div class="row text-center pt-2">
-                <p class="col-6">
-                  <b><%= town.city_name%></b>
-                </p>
-                <p class="col-6">
-                  <b><%= town.region_name%></b>
-                </p>
-              </div>
-              <p class=""><i><%= town.description%></i></p>
-              <div class="d-flex justify-content-around">
-                <p class="card-text"><%= town.activity_type %></p>
-                <p class="card-text" value="<%= town.activity_likes %>">
-                  <%=town.activity_likes %>👍
-                </p>
+    <main>
+      <section class="first row d-flex justify-content-center">
+        <h1 class="presentation col-12 mb-1">
+          Descubre todos los <sapn style="color: #ebeb14">pueblos</sapn> de
+          España,
+          <br />
+          hasta el último rincón
+        </h1>
+        <div
+          class="contenedor d-flex justify-content-center align-items-center col-12 gap-5"
+        >
+          <% result.forEach(town => { %>
+          <a href="/town/oneTown/<%= town.town_id %>">
+            <div
+              class="card p-1"
+              style="
+                width: 18rem;
+                background-image: url(/images/town/<%= town.img %>);
+              "
+            >
+              <!-- <img
+                src="/images/town/<%= town.img %>"
+                class="card-img-top"
+                alt="imgen representativa del pueblo"
+              /> -->
+              <div class="card-body">
+                <h4 class="card-title text-center"><%= town.town_name %></h4>
+                <div class="row text-center pt-2">
+                  <p class="col-6">
+                    <b><%= town.city_name%></b>
+                  </p>
+                  <p class="col-6">
+                    <b><%= town.region_name%></b>
+                  </p>
+                </div>
+                <p class=""><i><%= town.description%></i></p>
+                <!-- <div class="d-flex justify-content-around">
+                  <p class="card-text"><%= town.activity_type %></p>
+                  <p
+                    class="card-text"
+                    style="color: black"
+                    value="<%= town.activity_likes %>"
+                  >
+                    <%=town.activity_likes %>👍
+                  </p>
+                </div> -->
               </div>
             </div>
-          </div>
-        </a>
-        <% }) %>
-      </div>
-    </section>
-
+          </a>
+          <% }) %>
+        </div>
+      </section>
+    </main>
+    <%- include('footer') %>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"

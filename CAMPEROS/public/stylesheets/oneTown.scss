@@ -8,15 +8,14 @@
 .first {
   @include mx.first;
   color: white;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/images/covadonga.jpg");
-  height: 100%;
+  //background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/covadonga.jpg");
+  height: 80vh;
   text-align: center;
 
   .marco {
     width: 80%;
-    height: 100%;
-    margin: 100px;
+    height: 80%;
+    //margin: 50px;
 
     .card-img {
       border-radius: 25px;
@@ -58,21 +57,26 @@
     height: 100%;
     width: 100%;
     font-weight: bold;
+    margin-bottom: 100px;
   }
 
   .card {
-    background-color: whitesmoke;
-    height: 450px;
+    background-position: center;
+    background-size: cover;
+    height: 400px;
     box-shadow: 18px 18px 20px transparent;
     font-weight: bold;
     margin-right: 25px;
+    .card-body {
+      background-color: rgba(0, 0, 0, 0.432);
+    }
   }
 
   .card:hover {
     box-shadow: 5px 5px 10px rgb(128, 128, 128);
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
   }
   img {
     height: 90%;
@@ -99,9 +103,27 @@
   }
 }
 
+.footerC {
+  position: sticky;
+  background-color: #ebeb14;
+  padding-top: 15px;
+
+  .iconos {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    img {
+      height: 50px;
+      width: 50px;
+    }
+  }
+}
+
 @media (max-width: 770px) {
   .marco {
-    flex-direction: column;
+    height: 100%;
+    width: 100%;
   }
   .marcoActividades {
     transition: 1s;
@@ -116,6 +138,9 @@
   }
   .imgC {
     padding-bottom: 0px;
+  }
+  .footer {
+    padding-top: 50px;
   }
 }
 

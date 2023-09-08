@@ -71,6 +71,11 @@
   color: black;
   font-weight: bold;
 }
+
+footer {
+  @include mx.footerC;
+}
+
 @media (max-width: 770px) {
   .formC {
     height: 850px;

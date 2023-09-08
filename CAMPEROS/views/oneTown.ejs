@@ -14,99 +14,124 @@
   </head>
   <body class="container-fluid">
     <%- include('navbar') %>
-    <!-- Section 1 -->
-    <section class="first row justify-content-center">
-      <div class="marco row d-flex justify-content-center align-items-center">
-        <h1 class="col-12 mb-5">
-          Área privada de:
-          <span class="pueblo"><%= result[0].town_name %></span>
-        </h1>
-
-        <div class="col-md-6 col-12 gap-4">
-          <img src="/images/town/<%= result[0].img %>" class="card-img mb-3" />
-        </div>
-        <div
-          class="col-md-6 col-12 gap-4 d-flex flex-column justify-content-center align-items-center"
-        >
-          <div class="row">
-            <p class="col-6"><%= result[0].telephone %></p>
-            <p class="col-6"><%= result[0].email %></p>
-            <div
-              class="col-12 d-flex flex-md-column justify-content-center gap-5"
-            >
-              <p class="card-text"><%= result[0].description %></p>
-            </div>
-            <div class="col-12 d-flex justify-content-center gap-5 mt-3">
-              <h4 class="card-text"><%= result[0].city_name %></h4>
-              <h4 class="card-text"><%= result[0].region_name %></h4>
-            </div>
-          </div>
-          <!-- botones -->
-          <div class="d-flex justify-content-around col-md-6 col-12 gap-1">
-            <a href="/town/showEditTown/<%= result[0].town_id %>" class=""
-              ><button type="button" class="btn btn-info">
-                Modificar Perfil
-              </button></a
-            >
-            <a href="/activity/formActivity/<%= result[0].town_id %>" class=""
-              ><button type="button" class="btn btn-info">
-                Nueva Actividad
-              </button></a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Section 2 -->
-    <section class="second row">
-      <h1 class="text-center">Actividades propuestas</h1>
-      <div
-        class="marcoActividades d-flex align-items-center col-12 col-mg-6 p-5 gap-4"
+    <main>
+      <!-- Section 1 -->
+      <section
+        class="first row justify-content-center"
+        style="
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.5),
+              rgba(0, 0, 0, 0.5)
+            ),
+            url('/images/town/<%= result[0].img %>');
+        "
       >
-        <% result2.forEach(activity => { %>
-        <a href="/activity">
-          <div class="card p-3 m-3" style="width: 20rem">
-            <img
-              src="/images/activity/<%= activity.activity_img %>"
-              class="card-img-top"
-            />
-            <div class="card-body">
-              <h5 class="card-title text-center">
-                <%= activity.activity_name %>
-              </h5>
-              <div class="d-flex justify-content-around">
-                <p class="card-text"><%= activity.activity_type %></p>
-                <p class="card-text" value="<%= activity.activity_likes %>">
-                  <%=activity.activity_likes %>👍
-                </p>
+        <div class="marco row d-flex justify-content-center align-items-center">
+          <h1 class="col-12">
+            Área privada de:
+            <span class="pueblo"><%= result[0].town_name %></span>
+          </h1>
+          <div
+            class="col-md-6 col-12 gap-4 d-flex flex-column justify-content-center align-items-center"
+          >
+            <div class="row">
+              <p class="col-6"><%= result[0].telephone %></p>
+              <p class="col-6"><%= result[0].email %></p>
+              <div
+                class="col-12 d-flex flex-md-column justify-content-center gap-5"
+              >
+                <p class="card-text"><%= result[0].description %></p>
               </div>
-              <div class="d-flex justify-content-center gap-2">
-                <a href="/activity/showEditActivity/<%=activity.activity_id%>"
-                  ><button type="button" class="btn1 btn-info">
-                    Modificar
-                  </button></a
-                >
-                <a
-                  href="/activity/deleteActivity/<%=activity.activity_id%>"
-                  class=""
-                  ><button type="button" class="btn1 btn-info">
-                    Borrar
-                  </button></a
-                >
-                <a
-                  href="/activity/logicDeleteActivity/<%=activity.activity_id%>"
-                  class=""
-                  ><button type="button" class="btn1 btn-info">
-                    Desactivar
-                  </button></a
-                >
+              <div class="col-12 d-flex justify-content-center gap-5 mt-3">
+                <h4 class="card-text"><%= result[0].city_name %></h4>
+                <h4 class="card-text"><%= result[0].region_name %></h4>
               </div>
             </div>
+            <!-- botones -->
+            <div class="d-flex justify-content-around col-md-6 col-12 gap-1">
+              <a href="/town/showEditTown/<%= result[0].town_id %>" class=""
+                ><button type="button" class="btn btn-info">
+                  Modificar Perfil
+                </button></a
+              >
+              <a href="/activity/formActivity/<%= result[0].town_id %>" class=""
+                ><button type="button" class="btn btn-info">
+                  Nueva Actividad
+                </button></a
+              >
+            </div>
           </div>
-        </a>
-        <% }) %>
+        </div>
+      </section>
+      <!-- Section 2 -->
+      <section class="second row">
+        <h1 class="text-center">Actividades propuestas</h1>
+        <div
+          class="marcoActividades d-flex align-items-center col-12 col-mg-6 p-5 gap-4"
+        >
+          <% result2.forEach(activity => { %>
+          <a href="/activity">
+            <div
+              class="card p-3 m-3"
+              style="
+                width: 20rem;
+                background-image: url(/images/activity/<%= activity.activity_img %>);
+              "
+            >
+              <div class="card-body">
+                <h5 class="card-title text-center">
+                  <%= activity.activity_name %>
+                </h5>
+                <div class="d-flex justify-content-around">
+                  <p class="card-text"><%= activity.activity_type %></p>
+                  <p class="card-text" value="<%= activity.activity_likes %>">
+                    <%=activity.activity_likes %>👍
+                  </p>
+                </div>
+                <div class="d-flex justify-content-center gap-2">
+                  <a href="/activity/showEditActivity/<%=activity.activity_id%>"
+                    ><button type="button" class="btn1 btn-info">
+                      Modificar
+                    </button></a
+                  >
+                  <a
+                    href="/activity/deleteActivity/<%=activity.activity_id%>"
+                    class=""
+                    ><button type="button" class="btn1 btn-info">
+                      Borrar
+                    </button></a
+                  >
+                  <a
+                    href="/activity/logicDeleteActivity/<%=activity.activity_id%>"
+                    class=""
+                    ><button type="button" class="btn1 btn-info">
+                      Desactivar
+                    </button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </a>
+          <% }) %>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footerC row align-items-bottom">
+      <div class="iconos col-md-4 offset-md-4">
+        <a href="/home"><img src="/images/github.png" alt="github" /></a>
+        <a href="/home"><img src="/images/instagram.png" alt="instagram" /></a>
+        <a href="/home"><img src="/images/whatsapp.png" alt="whatsapp" /></a>
+        <a href="/home"><img src="/images/mail.png" alt="mail" /></a>
       </div>
-    </section>
+      <div class="col-md-4 text-center mt-4">
+        <h5>
+          Camperos S.A. <br />
+          C/ Segunda Estrella a la derecha <br />
+          Tlf: 666555000
+        </h5>
+      </div>
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"

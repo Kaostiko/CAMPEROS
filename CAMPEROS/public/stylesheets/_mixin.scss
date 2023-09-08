@@ -21,3 +21,20 @@
   margin-bottom: 35vh;
   padding: 10px;
 }
+
+@mixin footerC {
+  position: sticky;
+  background-color: #ebeb14;
+  padding-top: 15px;
+
+  .iconos {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    img {
+      height: 50px;
+      width: 50px;
+    }
+  }
+}
